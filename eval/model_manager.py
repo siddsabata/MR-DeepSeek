@@ -5,13 +5,16 @@ from peft import PeftModel, PeftConfig
 from huggingface_hub import snapshot_download
 import gc
 import argparse
+from dotenv import load_dotenv
+
+load_dotenv()  # pip install python-dotenv first
 
 class ModelLoader:
     """Simple loader for a single AI model."""
     
     def __init__(self, hf_token=None, project_dir=None):
-        self.hf_token = hf_token or "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"
-        self.project_dir = project_dir or "/ocean/projects/cis250063p/ssabata/eval"
+        self.hf_token = hf_token 
+        self.project_dir = project_dir 
         self.models_dir = os.path.join(self.project_dir, "models")
         os.makedirs(self.models_dir, exist_ok=True)
         
@@ -186,7 +189,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     # Create loader
-    loader = ModelLoader()
+    loader = ModelLoader(hf_token=os.environ.get("HF_TOKEN"),
+                         project_dir="/ocean/projects/cis250063p/ssabata/eval")
     print(f"Using device: {loader.device}")
     
     # Print header based on model type
