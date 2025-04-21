@@ -1,0 +1,8 @@
+{
+    "model_path": "../model/lora-output-bs8-1",
+    "hf_repo_name": "your-username/your-model-name",
+    "is_lora": true,
+    "base_model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+    "commit_message": "Upload LoRA adapter model",
+    "hf_token": "YOUR_HUGGING_FACE_TOKEN"
+} 

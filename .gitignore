@@ -1,3 +1,4 @@
 eval/.eval_env
 eval/models
 .env
+jake-scripts/upload_config.json
