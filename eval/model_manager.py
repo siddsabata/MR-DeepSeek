@@ -6,8 +6,7 @@ from huggingface_hub import snapshot_download
 import gc
 import argparse
 from dotenv import load_dotenv
-
-load_dotenv()  # pip install python-dotenv first
+import time
 
 class ModelLoader:
     """Simple loader for a single AI model."""
@@ -123,7 +122,7 @@ class ModelLoader:
         print(f"Model loaded successfully!")
     
     def test_inference(self, prompt="What is your name?", max_tokens=50):
-        """Run a quick inference test on the loaded model."""
+        """Run a quick inference test on the loaded model and time it."""
         if self.model is None or self.tokenizer is None:
             print("No model loaded. Call load_model() first.")
             return None
@@ -134,7 +133,8 @@ class ModelLoader:
         # Tokenize input
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
         
-        # Generate response
+        # Generate response (with timing)
+        start_time = time.time()
         with torch.no_grad():
             outputs = self.model.generate(
                 **inputs,
@@ -143,10 +143,14 @@ class ModelLoader:
                 top_p=0.95,
                 do_sample=True
             )
+        inference_time = time.time() - start_time
         
         # Decode response
         response = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        
+        # Report results
         print(f"\nModel response: '{response}'")
+        print(f"Inference time: {inference_time:.4f} seconds")
         print("\n✓ Model inference test completed successfully!")
         
         return response
@@ -187,7 +191,7 @@ if __name__ == "__main__":
     parser.add_argument("--prompt", type=str, default="What are the symptoms of pneumonia?", 
                         help="Test prompt")
     args = parser.parse_args()
-    
+    load_dotenv()  # pip install python-dotenv first
     # Create loader
     loader = ModelLoader(hf_token=os.environ.get("HF_TOKEN"),
                          project_dir="/ocean/projects/cis250063p/ssabata/eval")
