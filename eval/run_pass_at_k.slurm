@@ -25,7 +25,7 @@ MODEL_NAME="deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 LORA_ADAPTER=""
 CUSTOM_DIR=""
 STRICT_PROMPT=true
-EVAL_FILE="/ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval/data/eval_data_subset.json"
+EVAL_FILE="/ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval/data/medqa_usmle_subset_100.json"
 BATCH_SIZE=8
 K=3
 
