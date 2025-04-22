@@ -82,28 +82,31 @@ def main():
     model = loader.model
     tokenizer = loader.tokenizer
 
-    # Prepare chat template if needed
-    if args.use_chat_template and hasattr(tokenizer, 'chat_template'):
-        template = Template(tokenizer.chat_template)
-    else:
-        template = None
-
     # Define a helper to call the model on a list of prompts
     def call_model(prompts, max_new_tokens=2000, print_example=False):
         if print_example:
             print("Example prompt:")
             print(prompts[0])
 
-        # Apply chat template if provided
+        # Apply chat template if provided using the recommended tokenizer method
         formatted = prompts
-        if template:
-            formatted = [
-                template.render(
-                    messages=[{"role": "user", "content": p}],
-                    bos_token=tokenizer.bos_token,
-                    add_generation_prompt=True
-                ) for p in prompts
-            ]
+        if args.use_chat_template and hasattr(tokenizer, 'apply_chat_template'):
+            try:
+                # Use tokenizer.apply_chat_template directly
+                formatted = [
+                    tokenizer.apply_chat_template(
+                        [{"role": "user", "content": p}],
+                        tokenize=False,  # We want the formatted string, not tokens
+                        add_generation_prompt=True # Important for instruction-following models
+                    ) for p in prompts
+                ]
+            except Exception as e:
+                # Add a warning if applying the template fails for some reason
+                print(f"Warning: Failed to apply chat template using tokenizer.apply_chat_template: {e}. Falling back to raw prompts.")
+                # Keep 'formatted' as the original prompts if template application fails
+        elif args.use_chat_template:
+            # Add a warning if the user wants to use the template but the method isn't available
+            print("Warning: Tokenizer does not have 'apply_chat_template' method, but use_chat_template=True. Using raw prompts.")
 
         # Truncate prompts if max_tokens set
         if args.max_tokens > 0:
