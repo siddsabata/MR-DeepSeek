@@ -22,12 +22,12 @@ conda activate /ocean/projects/cis250063p/ssabata/conda_envs/py310_env
 
 # Set parameters
 MODEL_NAME="deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
-LORA_ADAPTER="jakebentley2001/fine-tuned-llama-distilled-deepseek"
-CUSTOM_DIR="jake-lora-ft"
+LORA_ADAPTER=""
+CUSTOM_DIR=""
 STRICT_PROMPT=true
-EVAL_FILE="/ocean/projects/cis250063p/ssabata/HuatuoGPT-o1/evaluation/data/medqa_usmle_subset_100.json"
+EVAL_FILE="/ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval/data/eval_data_subset.json"
 BATCH_SIZE=8
-K=20
+K=3
 
 echo "----------------------------------------"
 echo "Running pass@k evaluation with:"
@@ -44,22 +44,20 @@ echo "----------------------------------------"
 cd /ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval
 
 # Run the pass_at_k script
-if [ "$STRICT_PROMPT" = "true" ]; then
-    python pass_at_k.py --model_name "$MODEL_NAME" \
-        --lora_adapter "$LORA_ADAPTER" \
-        --custom_dir "$CUSTOM_DIR" \
-        --eval_file "$EVAL_FILE" \
-        --batch_size $BATCH_SIZE \
-        --strict_prompt \
-        --k $K
-else
-    python pass_at_k.py --model_name "$MODEL_NAME" \
-        --lora_adapter "$LORA_ADAPTER" \
-        --custom_dir "$CUSTOM_DIR" \
-        --eval_file "$EVAL_FILE" \
-        --batch_size $BATCH_SIZE \
-        --k $K
-fi
+
+# python pass_at_k.py --model_name "$MODEL_NAME" \
+#     --lora_adapter "$LORA_ADAPTER" \
+#     --custom_dir "$CUSTOM_DIR" \
+#     --eval_file "$EVAL_FILE" \
+#     --batch_size $BATCH_SIZE \
+#     --strict_prompt \
+#     --k $K
+
+python pass_at_k.py --model_name "$MODEL_NAME" \
+    --eval_file "$EVAL_FILE" \
+    --batch_size $BATCH_SIZE \
+    --strict_prompt \
+    --k $K
 
 # Record end time and calculate duration
 END_TIME=$(date +%s)
