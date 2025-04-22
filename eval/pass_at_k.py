@@ -46,7 +46,7 @@ def main():
                         help="Max tokens to generate per call")
     parser.add_argument('--max_tokens', type=int, default=-1,
                         help="Max tokens in prompt (-1 for no limit)")
-    parser.add_argument('--use_chat_template', action='store_true', default=True,
+    parser.add_argument('--use_chat_template', type=bool, default=True,
                         help="Whether to format with tokenizer.chat_template if available")
     parser.add_argument('--strict_prompt', action='store_true',
                         help="Use strict prompt that ends with 'The answer is X.'")
@@ -82,14 +82,14 @@ def main():
     model = loader.model
     tokenizer = loader.tokenizer
 
-    # Prepare chat template if available
+    # Prepare chat template if needed
     if args.use_chat_template and hasattr(tokenizer, 'chat_template'):
         template = Template(tokenizer.chat_template)
     else:
         template = None
 
     # Define a helper to call the model on a list of prompts
-    def call_model(prompts, print_example=False):
+    def call_model(prompts, max_new_tokens=2000, print_example=False):
         if print_example:
             print("Example prompt:")
             print(prompts[0])
@@ -130,7 +130,7 @@ def main():
             with torch.no_grad():
                 outs = model.generate(
                     **inputs,
-                    max_new_tokens=args.max_new_tokens,
+                    max_new_tokens=max_new_tokens,
                     temperature=0.5,
                     top_p=0.9,
                     do_sample=True
@@ -170,7 +170,7 @@ def main():
 
     for idx, itm in enumerate(tqdm(items, desc="Evaluating pass@k")):
         prompts = [itm['input_str']] * args.k
-        preds, _ = call_model(prompts, print_example=(idx == 0))
+        preds, _ = call_model(prompts, args.max_new_tokens, print_example=(idx == 0))
         itm['outputs'] = preds
 
         # Extract predicted labels for each repeat
