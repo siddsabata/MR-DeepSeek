@@ -1,11 +1,9 @@
-#!/bin/bash
-#SBATCH -p GPU-shared
 #SBATCH -A cis250063p
 #SBATCH --gpus=h100-80:1
-#SBATCH --time=4:00:00
+#SBATCH --time=24:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=64G 
+#SBATCH --mem=64G
 #SBATCH --output=eval_pipeline_%j.out
 #SBATCH --error=eval_pipeline_%j.err
 
@@ -21,18 +19,17 @@ module load cuda
 conda activate /ocean/projects/cis250063p/ssabata/conda_envs/py310_env
 
 # Set fixed parameters
-MODEL_NAME="deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
-LORA_ADAPTER="jakebentley2001/fine-tuned-llama-distilled-deepseek"
-CUSTOM_DIR="jake-lora-ft"
+MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
+LORA_ADAPTER="jakebentley2001/fine-tuned-llama-distilled-deepseek-not-overfit"
+CUSTOM_DIR="ft2"
 STRICT_PROMPT=true
-EVAL_FILE="/ocean/projects/cis250063p/ssabata/HuatuoGPT-o1/evaluation/data/eval_data.json"
+EVAL_FILE="/ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval/data/eval_data.json"
 BATCH_SIZE=8
+HF_TOKEN="YOUR TOKEN HERE"
 
 echo "----------------------------------------"
 echo "Running evaluation with:"
 echo "Model: $MODEL_NAME"
-echo "LoRA adapter: $LORA_ADAPTER"
-echo "Custom directory: $CUSTOM_DIR"
 echo "Strict prompt: $STRICT_PROMPT"
 echo "Eval file: $EVAL_FILE"
 echo "Batch size: $BATCH_SIZE"
@@ -42,11 +39,8 @@ echo "----------------------------------------"
 cd /ocean/projects/cis250063p/ssabata/MR-DeepSeek/eval
 
 # Build the command with LoRA support
-if [ "$STRICT_PROMPT" = "true" ]; then
-    python evaluator.py --model_name "$MODEL_NAME" --lora_adapter "$LORA_ADAPTER" --custom_dir "$CUSTOM_DIR" --eval_file "$EVAL_FILE" --batch_size $BATCH_SIZE --strict_prompt
-else
-    python evaluator.py --model_name "$MODEL_NAME" --lora_adapter "$LORA_ADAPTER" --custom_dir "$CUSTOM_DIR" --eval_file "$EVAL_FILE" --batch_size $BATCH_SIZE
-fi
+# python evaluator.py --model_name "$MODEL_NAME" --lora_adapter "$LORA_ADAPTER" --custom_dir "$CUSTOM_DIR" --eval_file "$EVAL_FILE" --batch_size $BATCH_SIZE --strict_prompt
+python evaluator.py --model_name "$MODEL_NAME" --eval_file "$EVAL_FILE" --batch_size $BATCH_SIZE --hf_token $HF_TOKEN --strict_prompt
 
 # Record end time and calculate duration
 END_TIME=$(date +%s)
