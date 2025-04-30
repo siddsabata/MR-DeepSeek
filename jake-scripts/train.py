@@ -4,7 +4,7 @@ from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 #import bitsandbytes as bnb
 from torch.utils.data import Dataset, DataLoader
 # LoraConfig: A configuration object that specifies how LoRA (Low-Rank Adapters)
-# should be inserted (how many “r” ranks, which target modules, dropout, etc.).
+# should be inserted (how many "r" ranks, which target modules, dropout, etc.).
 
 # get_peft_model: A function that, given a base model and a LoRA config, 
 # returns a wrapped version of the model with LoRA adapter layers attached.
@@ -104,7 +104,7 @@ class Train_dataset(torch.utils.data.Dataset):
 def main():
     print("Starting training script...")
     print("login into wandb")
-    wandb.login(key="00b5a9f86429598bdcc1fb4639c71b8cec609b57")
+    wandb.login(key="YOUR WANDB KEY")
         # Initialize wandb run with a project name and configuration
     wandb.init(
         project="DeepSeek-Training",
@@ -161,7 +161,7 @@ def main():
 
 
     lora_config = LoraConfig(
-        r=16, #  the rank of the LoRA decomposition. This directly influences how many additional parameters you’re training. A higher rank means more adapter parameters but potentially greater fine-tuning capacity.
+        r=16, #  the rank of the LoRA decomposition. This directly influences how many additional parameters you're training. A higher rank means more adapter parameters but potentially greater fine-tuning capacity.
         lora_alpha=32, # a scaling factor for the LoRA updates, which can help with training stability and effectiveness.
         target_modules=["q_proj","k_proj","v_proj","o_proj","mlp.gate_proj","mlp.up_proj","mlp.down_proj"], # ,"mlp.gate_proj" add o_proj and mlp.up_proj, mlp.down_proj if performance is not great
         lora_dropout=0.05, # dropout rate applied to LoRA layers, to help prevent overfitting
