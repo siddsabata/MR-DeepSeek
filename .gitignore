@@ -1,4 +1,6 @@
 eval/.eval_env
 eval/models
 .env
+eval/results
 jake-scripts/upload_config.json
+eval/__pycache__

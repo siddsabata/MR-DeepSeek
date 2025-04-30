@@ -1,0 +1,306 @@
+{
+  "MedMCQA_validation": [
+    {
+      "question": "A doctor who performed the autopsy on a 26-year-old married woman, committing suicide found the cause of death to be aluminium phosphide poisoning. She was summoned in a cou of law where he willingly hides this information. This is punishable under which section?",
+      "options": {
+        "A": "IPC 193",
+        "B": "CrPC 175",
+        "C": "CrPC 69",
+        "D": "IPC 189"
+      },
+      "answer_idx": "A",
+      "answer": "IPC 193"
+    },
+    {
+      "question": "Best parameter for ultrasound evaluation of IUGR is:",
+      "options": {
+        "A": "Placental membrane",
+        "B": "Length of femur",
+        "C": "Abdominal circumference",
+        "D": "BPD"
+      },
+      "answer_idx": "C",
+      "answer": "Abdominal circumference"
+    },
+    {
+      "question": "Ionic exchange between enamel surface and environment:",
+      "options": {
+        "A": "Does not take place once enamel matures",
+        "B": "Stops after 2 years of eruption",
+        "C": "Continues till adult life",
+        "D": "Continues through out life"
+      },
+      "answer_idx": "D",
+      "answer": "Continues through out life"
+    },
+    {
+      "question": "All of the following are used for screening cancers in females except",
+      "options": {
+        "A": "CA-125: Ovarian cancer",
+        "B": "Office endometrial aspirate: Endometrial carcinoma",
+        "C": "Pap smear: Cervical cancer",
+        "D": "Mammography: Breast cancer"
+      },
+      "answer_idx": "B",
+      "answer": "Office endometrial aspirate: Endometrial carcinoma"
+    },
+    {
+      "question": "Black Extension for prevention to MID (Minimally invasive dentistry), all are true except",
+      "options": {
+        "A": "Site & size of lesion",
+        "B": "Technique & Material used",
+        "C": "Increase number of cariogenic bacteria",
+        "D": "Minimal preparation of cavity"
+      },
+      "answer_idx": "C",
+      "answer": "Increase number of cariogenic bacteria"
+    }
+  ],
+  "MedQA_USLME_test": [
+    {
+      "question": "A 30-year-old man presents to his primary care physician with complaints of excessive fatigue and weakness for the last several weeks. He also complains of abdominal pain and constipation for the same duration. On further questioning, he reports that he has lost 8 pounds in the last 2 weeks. Past medical history and family history are insignificant. His temperature is 37.3\u00b0 C (99.2\u00b0 F), respirations are 21/min, pulse is 63/min, and blood pressure is 99/70 mm Hg. On physical examination, he is a tired-appearing, thin male. He has a bronze discoloration to his skin, but he denies being outside in the sun or any history of laying in tanning beds. What is the next best step in the management of this patient?",
+      "answer": "Start him on both hydrocortisone and fludrocortisone therapy",
+      "options": {
+        "A": "Administer intravenous fludrocortisone",
+        "B": "Start him on androgen replacement treatment",
+        "C": "Start him on both hydrocortisone and fludrocortisone therapy",
+        "D": "Order an ACTH stimulation test"
+      },
+      "answer_idx": "C"
+    },
+    {
+      "question": "A 58-year-old white man with hypertension and type 2 diabetes mellitus comes to the physician because of a 3-month history of a painless lesion on his lower lip. He has smoked one pack of cigarettes daily for 20 years. He has worked as a fruit picker for the past 25 years. His current medications include captopril and metformin. Examination of the oral cavity shows a single ulcer near the vermillion border. Which of the following is the most likely diagnosis?",
+      "answer": "Squamous cell carcinoma",
+      "options": {
+        "A": "Squamous cell carcinoma",
+        "B": "Aphthous stomatitis",
+        "C": "Actinic keratosis",
+        "D": "Traumatic ulcer"
+      },
+      "answer_idx": "A"
+    },
+    {
+      "question": "A 46-year-old woman comes to the physician because of severe muscle and joint pain for 5 months. The pain varies in location and intensity. She also has joint stiffness in the morning and reports fatigue throughout the day that she attributes to not sleeping well. She reports a tingling sensation in her lower limbs. Her bowel habits are unchanged but she often feels bloated. She has primary hypertension and occasional migraine headaches. She does not smoke or consume alcohol. Her medications include propranolol and sumatriptan. She appears healthy. Examination shows symmetric muscular tenderness at the base of the neck, over the shoulders, and in the lumbosacral area. Strength and deep tendon reflexes are normal. Laboratory studies show:\nHemoglobin 14.3 g/dL\nLeukocyte count 9300/mm3\nPlatelet count 230,000/mm3\nMean corpuscular volume 85 \u03bcm3\nErythrocyte sedimentation rate 12 mm/h\nSerum\nGlucose 92 mg/dL\nCreatinine 0.6 mg/dL\nTSH 3.1 \u03bcU/mL\nUrinalysis is within normal limits. Which of the following is the most appropriate therapy for this patient?\"",
+      "answer": "Amitriptyline",
+      "options": {
+        "A": "Temazepam",
+        "B": "Vitamin B12",
+        "C": "Amitriptyline",
+        "D": "Methotrexate\n\""
+      },
+      "answer_idx": "C"
+    },
+    {
+      "question": "A 40-year-old businessman who was previously well is brought into the emergency department by his assistant with a complaint of left-sided weakness after a chiropractic neck manipulation. He has never felt like this before. Past medical history is insignificant. His blood pressure is 125/75 mm Hg, pulse 86/min, respiratory rate 13/min, temperature 36.8\u00b0C (98.2\u00b0F). A T2-weighted MRI shows a left C5 hemicord lesion. The patient is treated with cervical immobilization, a course of steroids, and physical therapy. What other finding will most likely be seen in this patient?",
+      "answer": "Right-sided analgesia",
+      "options": {
+        "A": "Spastic paralysis at the level of lesion",
+        "B": "Right-sided Horner's syndrome",
+        "C": "Contralateral corticospinal tract involvement",
+        "D": "Right-sided analgesia"
+      },
+      "answer_idx": "D"
+    },
+    {
+      "question": "A 29-year-old man is brought to the emergency department by a concerned neighbor. The patient appears disheveled, has a flat affect, and appears to be having auditory hallucinations. He is alert and oriented to time, person, and place and has an intact long-term and short-term memory. His neighbor says that he never really knew the patient that well and that he mostly kept to himself. They have been neighbors for the past 3 years at an apartment close to the hospital. What worried the neighbor was a sudden change in the patient's behavior which started last week. He suddenly seemed interested in attending all the local council meetings and social gatherings. He is very talkative at these events and boasts highly of himself and starts suggesting changes that the committee could make with his help. He gets very agitated when they deny accepting his suggestions. Which of the following is a predictor of good prognosis for this patient's condition?",
+      "answer": "Affective symptoms",
+      "options": {
+        "A": "Affective symptoms",
+        "B": "Being single",
+        "C": "Male sex",
+        "D": "Negative symptoms"
+      },
+      "answer_idx": "A"
+    }
+  ],
+  "PubMedQA_test": [
+    {
+      "question": "To determine whether betamethasone (BM) reduces the cochlear toxicity of otic gentamicin (GM) if given together. Controlled animal study. Thirty-four mice were assigned at random to receive intratympanic injections of either 0.1 % BM (11 mice), 0.3% GM (13 mice), or a combination of both (GM/BM) with benzalkonium chloride (10 mice) in the left ear (treated) and saline on the right (untreated). Six injections were given on alternate days. Auditory brainstem response thresholds were assessed at 1 month, 2 months, and>2 months. There was a significantly greater degree of hearing loss in the BM-treated ears compared to the untreated ears (6.48 dB hearing loss, P = .007) and in the GM-treated ears compared to untreated ears (6.59 dB hearing loss, P = .010,). However, otic GM/BM and benzalkonium chloride did not cause significant additional hearing loss compared with the untreated ears (3.56 dB hearing loss, P = .242).\n\nUsing the above document as a reference, please review the following question and choose the option you find most appropriate.\nSteroids in aminoglycoside-containing ear drops: do they reduce cochlear toxicity?",
+      "options": {
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+      },
+      "answer": "yes",
+      "answer_idx": "A"
+    },
+    {
+      "question": "To assess if the Hawkins sign can predict whether or not astragalus fractures of the neck will develop avascular necrosis. It is also assessed whether the occurrence of this complication is related to the displacement of the fracture, soft tissue injury, or delay in the reduction or surgery. The results were compared with those found in the literature. A retrospective study was conducted on 23 talar neck fractures recorded over a a period of thirteen years. The following variables were analysed: displacement of the fracture, soft tissue injury, delay and type of treatment, complications, observation of the Hawkins sign, and functional outcome. There were 7 type I Hawkins fractures, 11 type II, and 4 type III and 1 type IV. Four cases developed avascular necrosis (2 Hawkins type II and 2 type III). Hawkins sign was observed in 12 cases, of which none developed necrosis. Four cases with negative Hawkins sign developed necrosis. No statistically significant differences were found when comparing the development of avascular necrosis with the displacement of the fracture, soft tissue injury, or delay in treatment. Differences were found when comparing the development of avascular necrosis with the Hawkins sign (P=.03).\n\nUsing the above document as a reference, please review the following question and choose the option you find most appropriate.\nIs the Hawkins sign able to predict necrosis in fractures of the neck of the astragalus?",
+      "options": {
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+      },
+      "answer": "maybe",
+      "answer_idx": "C"
+    },
+    {
+      "question": "Sternal fractures in childhood are rare. The aim of the study was to investigate the accident mechanism, the detection of radiological and sonographical criteria and consideration of associated injuries. In the period from January 2010 to December 2012 all inpatients and outpatients with sternal fractures were recorded according to the documentation. A total of 4 children aged 5-14\u00a0years with a sternal fracture were treated in 2\u00a0years, 2\u00a0children were hospitalized for pain management and 2 remained in outpatient care.\n\nUsing the above document as a reference, please review the following question and choose the option you find most appropriate.\nSternal fracture in growing children : A rare and often overlooked fracture?",
+      "options": {
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+      },
+      "answer": "maybe",
+      "answer_idx": "C"
+    },
+    {
+      "question": "To explain China's cigarette pricing mechanism and the role of the Chinese State Tobacco Monopoly Administration (STMA) on cigarette pricing and taxation. Published government tobacco tax documentation and statistics published by the Chinese STMA are used to analyse the interrelations among industry profits, taxes and retail price of cigarettes in China. The 2009 excise tax increase on cigarettes in China has not translated into higher retail prices because the Chinese STMA used its policy authority to ensure that retail cigarette prices did not change. The government tax increase is being collected at both the producer and wholesale levels. As a result, the 2009 excise tax increase in China has resulted in higher tax revenue for the government and lower profits for the tobacco industry, with no increase in the retail price of cigarettes for consumers.\n\nUsing the above document as a reference, please review the following question and choose the option you find most appropriate.\nCan increases in the cigarette tax rate be linked to cigarette retail prices?",
+      "options": {
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+      },
+      "answer": "no",
+      "answer_idx": "B"
+    },
+    {
+      "question": "Several atypical antipsychotics (AAPs) are used as second-line agents for treatment resistant depression. AAPs can be expensive compared to other treatment options and can cause several side effects. To estimate healthcare costs and utilization of AAPs compared to other second-line agents. Observational study using Medicaid claims data (2006-2011). Subjects were depression-diagnosed adult members with at least two prescriptions of antidepressant medications followed by a second-line agent. Gamma generalized linear models (GLM) produced estimates of the difference in mean expenditures among treatment groups after adjusting for individual baseline characteristics using propensity scores. Negative binomial models produced estimates of the difference in number of hospitalizations and emergency department (ED) visits. A total of 3910 members received second-line treatment. Treatment groups were AAPs (n\u2009=\u20092211), augmentation agents other than AAPs (n\u2009=\u20091008), and antidepressant switching (n\u2009=\u2009691). AAPs resulted in higher mean adjusted pharmacy costs and higher mean adjusted total mental health-related costs. Mean adjusted total healthcare costs and number of inpatient and ED visits were not different among treatments.\n\nUsing the above document as a reference, please review the following question and choose the option you find most appropriate.\nDoes the use of atypical antipsychotics as adjunctive therapy in depression result in cost savings?",
+      "options": {
+        "A": "yes",
+        "B": "no",
+        "C": "maybe"
+      },
+      "answer": "no",
+      "answer_idx": "B"
+    }
+  ],
+  "MMLU-Pro_Medical_test": [
+    {
+      "question": "The [(A + G) / (T + C)] ratio in one strand of duplex DNA is 0.3. (a) What is the ratio in the complementary strand? (b) What is the ratio for the entire molecule? (c) If the [(A + T) / (C + G)] ratio is 0.3, what is the ratio in the complementarystrand and in the entire molecule?",
+      "options": {
+        "A": "2.3, 1.15, 0.45",
+        "B": "3.0, 0.5, 3.0",
+        "C": "3.3, 1, 0.3",
+        "D": "1.2, 0.6, 1.2",
+        "E": "0.7, 1.4, 0.7",
+        "F": "0.9, 1.2, 0.5",
+        "G": "2.0, 0.5, 2.0",
+        "H": "1.0, 0.5, 1.0",
+        "I": "2.5, 0.8, 0.4",
+        "J": "1.5, 2, 0.6"
+      },
+      "answer": "3.3, 1, 0.3",
+      "answer_idx": "C"
+    },
+    {
+      "question": "When using bioelectrical impedance for measuring body composition, why does an electrical current travel faster through muscle than it does through fat?\n",
+      "options": {
+        "A": "Fat conducts electricity better than muscle",
+        "B": "Fat is denser than muscle",
+        "C": "Fat contains less water than muscle",
+        "D": "Muscle weighs more than fat",
+        "E": "Muscle contains less water than fat",
+        "F": "Muscle is denser than fat",
+        "G": "Muscle contains more water than fat",
+        "H": "Fat contains more electrolytes than muscle",
+        "I": "Muscle contains more electrolytes than fat",
+        "J": "Muscle weighs less than fat"
+      },
+      "answer": "Muscle contains more water than fat",
+      "answer_idx": "G"
+    },
+    {
+      "question": "A new enzyme is found in a transgenic mice that participates in synthesis of an unknown product using two reactants. When using radiolabeled compounds to study the enzyme, it is found that the enzyme catalyzes a process that switches a nitrogen group on one reactant to the other reactant. Which of the following categories would this new enzyme fall under?",
+      "options": {
+        "A": "Ligase",
+        "B": "Hydrolase",
+        "C": "Transferase",
+        "D": "Synthetase",
+        "E": "Phosphatase",
+        "F": "Lyase",
+        "G": "Oxidoreductase",
+        "H": "Decarboxylase",
+        "I": "Kinase",
+        "J": "Isomerase"
+      },
+      "answer": "Transferase",
+      "answer_idx": "C"
+    },
+    {
+      "question": "Two individuals, one with type B blood and one with type AB blood, have a child. The probability that the child has type O blood is",
+      "options": {
+        "A": "50%",
+        "B": "100%",
+        "C": "0%",
+        "D": "10%",
+        "E": "75%",
+        "F": "33%",
+        "G": "20%",
+        "H": "66%",
+        "I": "80%",
+        "J": "25%"
+      },
+      "answer": "0%",
+      "answer_idx": "C"
+    },
+    {
+      "question": "A 16-year-old male is brought to the emergency department with sudden-onset swelling of the right knee. He denies any trauma. Past medical history reveals cystic fibrosis. Examination of the knee reveals fluctuance on palpation of the joint but no increased warmth; mild restriction in range of motion due to the swelling is also noted. Numerous bruises are noted in various stages of resolution. Further history reveals easy bruising and bleeding from the gums over the past month. The most likely explanation for these findings is",
+      "options": {
+        "A": "acquired factor VIII deficiency",
+        "B": "diffuse intravascular coagulation secondary to infection",
+        "C": "hypocomplementemia",
+        "D": "malabsorption of vitamins A, D, E, and K"
+      },
+      "answer": "malabsorption of vitamins A, D, E, and K",
+      "answer_idx": "D"
+    }
+  ],
+  "GPQA_Medical_test": [
+    {
+      "question": "You are studying the patterns of inheritance between genes A and B on the same chromosome. They are on the same autosome and about 50 centimorgans apart. You believe they are linked, but you are not sure. The gene A codes for tail length so that the A1 allele is homozygous recessive and produces a long tail. The allele A2 is the dominant allele and codes for a short tail. The gene B codes for ear size; B1 is small, and B2 is large. Both of the B alleles are co-dominant. One parent of your F1 generation has A1B2/A1B2 genotype and long tail and large ears phenotype. The other parent is short-tailed with medium-sized ears and has the A1B1/A2B2 genotype. Unexpectedly, you find that all of their offspring are short-tailed. What is the relationship among the alleles?",
+      "answer": "B1 allele modifies A1 homozygotes",
+      "answer_idx": "B",
+      "options": {
+        "A": "allele A2 is imprinted",
+        "B": "B1 allele modifies A1 homozygotes",
+        "C": "allele A1 is not the recessive allele",
+        "D": "the genes A and B are not linked"
+      }
+    },
+    {
+      "question": "The procedure of the development of therapeutic drugs against the protein targets to combat diseases requires the large amounts of support data and trails to get approved. Which of the following is the most cost effective and basic approach to get initiated with the generation the related preliminary data?",
+      "answer": "In silico testing of drug interaction with the PDB formats of proteins.",
+      "answer_idx": "C",
+      "options": {
+        "A": "In vitro testing of drugs on the homologous proteins in the cell line.",
+        "B": "In silico study of drug interaction with proteins after developing their crystal structure.",
+        "C": "In silico testing of drug interaction with the PDB formats of proteins.",
+        "D": "In vitro testing of drugs on the homologous protein in bacteria."
+      }
+    },
+    {
+      "question": "In autumn, tree leaves get colourful and drop down in a process called \u201cautumn foliage\u201d. Chlorophylls degrade into colourless tetrapyrroles, while the hidden pigments, including carotenoids, become revealed. Carotenoids are yellow, orange, and red pigments which absorb light energy for photosynthesis and provide protection for photosystems. The precursor compound of carotenoids is geranylgeranyl diphosphate (GGPP). \n\nWhich metabolic pathway is not directly connected with GGPP in higher plants?",
+      "answer": "canthaxanthin biosynthesis",
+      "answer_idx": "A",
+      "options": {
+        "A": "canthaxanthin biosynthesis",
+        "B": "lutein biosynthesis",
+        "C": "brassinosteroid biosynthesis",
+        "D": "strigolactone biosynthesis"
+      }
+    },
+    {
+      "question": "You have created a therapeutic mRNA molecule that has shown efficacy in clinical trials for treating an autoimmune disease. You want to establish a clinical-scale bioprocess to produce and purify your biomolecule before encapsulating it in lipid nanoparticles. Which of these process flows would allow you to manufacture high-purity mRNA molecules? To simplify your selection, assume that some intermediate steps, such as ultraconcentration, diafiltration, and sterile filtration, have been omitted.",
+      "answer": "Synthesize the mRNA by IVT using a linearized plasmid DNA template carrying the genetic insert of interest. Purify the mRNA with two chromatography steps: an affinity capture step with an oligo dT resin and then polishing with hydrophobic interaction chromatography.",
+      "answer_idx": "C",
+      "options": {
+        "A": "Transfect CHO cells with plasmid DNA carrying the genetic insert of interest. Perform an IVT reaction to synthesize the mRNA. Purify the mRNA with tangential flow filtration coupled with size-separation chromatography to isolate your mRNA molecule.",
+        "B": "Synthesize the mRNA by IVT using a linearized plasmid DNA template carrying the genetic insert of interest. Perform RNase treatment to cleave the mRNA molecule and then perform size-separation chromatography to isolate the correct fragment size.",
+        "C": "Synthesize the mRNA by IVT using a linearized plasmid DNA template carrying the genetic insert of interest. Purify the mRNA with two chromatography steps: an affinity capture step with an oligo dT resin and then polishing with hydrophobic interaction chromatography.",
+        "D": "Culture HEK-293T cells expressing the mRNA of interest. Purify the mRNA with two chromatography steps: first, a capture step with anion exchange chromatography and then polishing with an oligo dT resin.  "
+      }
+    },
+    {
+      "question": "Which of these statements about DNA methylation in mammalian development is true?",
+      "answer": "During na\u00efve pluripotency, DNA methylation is largely restricted to transposable elements, and imprinted loci",
+      "answer_idx": "C",
+      "options": {
+        "A": "DNA methylation is primarily associated with silencing house-keeping and developmental genes",
+        "B": "After implantation, around 20-30% of CpGs in the mammalian genome are methylated",
+        "C": "During na\u00efve pluripotency, DNA methylation is largely restricted to transposable elements, and imprinted loci",
+        "D": "DNA demethylation can occur both passively (by enzymes) and actively (by cell division)"
+      }
+    }
+  ]
+}
